@@ -1,7 +1,7 @@
 name: path_download
-description: A new Flutter project.
-version: 0.0.1
-homepage:
+description: Path Download Plugin.
+version: 0.0.1+1
+homepage: https://github.com/Soufiene-Hmila/path_download
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

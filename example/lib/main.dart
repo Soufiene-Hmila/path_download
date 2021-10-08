@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
     Directory? downloadsDirectory;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      downloadsDirectory = (await PathDownload.pathDownload);
+      downloadsDirectory = (await PathDownload().pathDownload(TypeFileDirectory.pictures));
     } on PlatformException {
       print('Could not get the downloads directory');
     }
@@ -58,7 +58,7 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Text(
             _downloadsDirectory != null
-                ? 'Downloads directory: ${_downloadsDirectory!.path}\n'
+                ? 'Downloads directory: ${_downloadsDirectory!.absolute.path}\n'
                 : 'Could not get the downloads directory',
           ),
         ),

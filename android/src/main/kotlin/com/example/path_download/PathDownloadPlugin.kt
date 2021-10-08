@@ -40,21 +40,8 @@ class PathDownloadPlugin: FlutterPlugin, MethodCallHandler {
 
   private fun getDownloadsDirectory(typeFile : String?): String? {
 
-    val downloads: File? = applicationContext.getExternalFilesDir(DIRECTORY_DOWNLOADS)
-    downloads?.let { Log.i("DIRECTORY_DOWNLOADS", it.absolutePath) }
-
-    val pictures: File? = applicationContext.getExternalFilesDir(DIRECTORY_PICTURES)
-    pictures?.let { Log.i("DIRECTORY_PICTURES", it.absolutePath) }
-
-    val music: File? = applicationContext.getExternalFilesDir(DIRECTORY_MUSIC)
-    music?.let { Log.i("DIRECTORY_MUSIC", it.absolutePath) }
-
-    val dcim: File? = applicationContext.getExternalFilesDir(DIRECTORY_DCIM)
-    dcim?.let { Log.i("DIRECTORY_DCIM", it.absolutePath) }
-
-    val movies: File? = applicationContext.getExternalFilesDir(DIRECTORY_MOVIES)
-    movies?.let { Log.i("DIRECTORY_MOVIES", it.absolutePath) }
-
-    return downloads?.absolutePath
+    val fileDirectory: File? = applicationContext.getExternalFilesDir(typeFile)
+    fileDirectory?.let { Log.i("$typeFile", it.absolutePath) }
+    return fileDirectory?.absolutePath
   }
 }
