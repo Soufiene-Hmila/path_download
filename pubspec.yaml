@@ -1,6 +1,6 @@
 name: path_download
 description: Path Download Plugin.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Soufiene-Hmila/path_download
 
 environment:
